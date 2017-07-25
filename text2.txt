@@ -1,4 +1,4 @@
-Hello programmer! you have successfully open text file
+Hello programmer! you have successfully opened a text file
 hello Ruby programmer
 hello C programmer
 hello C++ programmer
