@@ -13,11 +13,17 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 const fs = require('fs');
-fs.readFile('text.txt',(err,data) =>{
+fs.readFile('text1.txt',(err,data) =>{
   if(err) throw err;
-  k = data.split('\n');
+  k = String(data).split('\n');
+  //getting line number
   rl.question('enter the line number:', (answer) => {
-  
+  //cheking if file line count greter than or equal to line number
+  if(k.length>=answer){
+    console.log(`${answer}th line: ${k[answer-1]}`);}
+  else{
+    console.log('no data');
+  }
   rl.close();
 });
 });
