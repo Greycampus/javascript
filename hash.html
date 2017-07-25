@@ -1,0 +1,15 @@
+<script>
+/*
+JavaScript program for initializing a dictionary or hash and print the second key value pair
+Ouput
+2->PHP
+*/
+var b = {1:'Ruby',2:'PHP',3:'C',4:'C++',5:'Python'};
+//printing the key and value using dictionary keys() and values() functions
+var keys =[];
+//getting keys of hash array
+for (var key in b){
+  keys.push(key)
+}
+document.write(keys[1]+' -> '+b[keys[1]]);
+</script>

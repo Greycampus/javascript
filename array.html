@@ -1,0 +1,22 @@
+<script>
+/*
+JavaScript program to take input a sequence of numbers from user and store it in a list or array
+Input
+3
+11
+12
+13
+Output
+[11, 12, 13]
+*/
+//message variable
+var msg = 'enter the number of variables';
+//printing message
+//getting user input
+var a = prompt(msg);
+var num = [];
+for (var i = 0; i < a; i++) {
+  num[num.length] = prompt('enter elements');
+}
+document.write('The elements are: '+num);
+</script>

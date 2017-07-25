@@ -1,0 +1,28 @@
+<script>
+/*
+JavaScript program to use local variable by taking user input and print nearest power of 3
+Input
+4
+Output
+3
+*/
+var msg = 'enter the number:';
+//printing message for user input
+//taking input and casting it into integer
+var n = prompt(msg);
+var minn = Math.floor(Math.log(n,3));
+var maxn = Math.ceil(Math.log(n,3));
+//helpful in getting the nearest power to 3 as follows
+//3^n = x+c where c is minimum for nearest power
+//3^n = x+c => log(3^n) = log(x+c) => n*log(3) = log(x+c)
+//let x+c = X
+//=> n = log(X)/log(3) where n is the nearest nth power of 3
+// similar in our case  3^n < x < 3^n+1 we calculate the minimum by
+//n<log(x)/log(3)<n+1 and find the nearest power
+if (Math.abs(n - Math.pow(3,minn)) <= Math.abs(Math.pow(3,maxn) - n)){
+  document.write(Math.pow(3,minn));
+}
+else{
+  document.write(Math.pow(3,maxn));
+}
+</script>
