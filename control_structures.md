@@ -38,7 +38,7 @@ if (a<b) {
 ```
 a is less than b
 ```
-## if else statement:
+## The if else statement:
 
 The 'if...else' statement is the next form of control statement that allows JavaScript to execute statements in a more controlled way.
 
@@ -110,7 +110,7 @@ document.write(greeting);
 ```
 Good day
 ```
-## Switch Statement
+## The Switch Statement
 
 Use the switch statement to select one of many blocks of code to be executed.
 
@@ -231,7 +231,7 @@ document.getElementById("demo").innerHTML = txt;
 ```
 John Doe 25 
 ```
-## while loop
+## The while loop
 
 The while loop loops through a block of code as long as a specified condition is true.
 

@@ -210,18 +210,15 @@ Logical or Boolean operators compare Boolean expressions and then return true or
       <script type="text/javascript">
             var a = true;
             var b = false;
-            var linebreak = "<br />";
-      
+            var linebreak = "<br />"; 
             document.write("(a && b) => ");
             result = (a && b);
             document.write(result);
-            document.write(linebreak);
-         
+            document.write(linebreak);         
             document.write("(a || b) => ");
             result = (a || b);
             document.write(result);
-            document.write(linebreak);
-         
+            document.write(linebreak);         
             document.write("!(a && b) => ");
             result = (!(a && b));
             document.write(result);

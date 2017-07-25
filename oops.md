@@ -8,7 +8,7 @@ JavaScript is an Object Oriented Programming (OOP) language. A programming langu
 
 Objects are composed of attributes. If an attribute contains a function, it is considered to be a method of the object, otherwise the attribute is considered a property.
 
-### Object Properties
+## Object Properties
 
 Object properties can be any of the three primitive data types, or any of the abstract data types, such as another object. Object properties are usually variables that are used internally in the object's methods, but can also be globally visible variables that are used throughout the page.
 
@@ -92,7 +92,7 @@ You can add new properties to existing objects.
 John is English.
 John is undefined years old.
 ```
-### Object Methods:
+## Object Methods:
 
 Methods are the functions that let the object do something or let something be done to it. There is a small difference between a function and a method – at a function is a standalone unit of statements and a method is attached to an object and can be referenced by the this keyword.
 
@@ -142,7 +142,7 @@ Creating and using an object method.
 A method is actually a function definition stored as a property value.
 Ram kiran
 ```
-### The Object() Constructor:
+## The Object() Constructor:
 
 A constructor is a function that creates and initializes an object. JavaScript provides a special constructor function called Object() to build the object. The return value of the Object() constructor is assigned to a variable.
 The variable contains a reference to the new object. The properties assigned to the object are not variables and are not defined with the var keyword.
@@ -172,7 +172,7 @@ Book name is : Perl
 Book author is : Mohtashim
 ```
 
-### The 'with' Keyword:
+## The 'with' Keyword:
 
 The ‘with’ keyword is used as a kind of shorthand for referencing an object's properties or methods.
 The object specified as an argument to with becomes the default object for the duration of the block that follows. The properties and methods for the object can be used without naming the object.
@@ -221,7 +221,7 @@ Book title is : Perl
 Book author is : Mohtashim 
 Book price is : 100
 ```
-### Subclasses and Superclasses
+## Subclasses and Superclasses
 
 In Java and C++, there is an explicit concept of the class hierarchy. i.e. Every class can have a super class from which it inherits properties and methods. Any class can be extended, or sub-classed so the resulting subclass can inherit its parent's behavior. As we have seen, JavaScript supports prototype inheritance instead of class based. It's possible for inheritance to happen other ways, however.
 

@@ -64,6 +64,7 @@ Please visit company and Microsoft!
 ### Regular Expression Modifiers
 
 Modifiers can be used to perform case-insensitive more global searches:
+
 |Modifier|	Description|
 |---|---|
 |i |	Perform case-insensitive matching|
@@ -73,6 +74,7 @@ Modifiers can be used to perform case-insensitive more global searches:
 #### Regular Expression Patterns
 
 Brackets are used to find a range of characters:
+
 |Pattern|Description|
 |---|---|
 |[abc]|Find any of the characters between the brackets|
@@ -89,6 +91,7 @@ Metacharacters are characters with a special meaning:
 |\uxxxx|Find the Unicode character specified by the hexadecimal number xxxx|
 
 Quantifiers define quantities:
+
 |Pattern|Description|
 |---|---|
 |n+|Matches any string that contains at least one n|
