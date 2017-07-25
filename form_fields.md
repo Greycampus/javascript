@@ -1,6 +1,6 @@
 # Form Fields
 
-A web form consists of any number of input fields grouped in a < form> tag. HTML allows a number of different styles of fields, ranging from simple on/off checkboxes to drop-down menus and fields for text input. This book won’t try to comprehensively discuss all field types, but we will start with a rough overview.
+A web form consists of any number of input fields grouped in a < form> tag. HTML allows a number of different styles of fields, ranging from simple on/off checkboxes to drop-down menus and fields for text input. 
 
 A lot of field types use the < input> tag. This tag’s type attribute is used to select the field’s style. These are some commonly used < input> types:
 

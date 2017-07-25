@@ -301,8 +301,6 @@ The notation p > a {…} applies the given styles to all < a> tags that are dire
 
 ## Query selectors:
 
-We won’t be using style sheets all that much in this book. Although understanding them is crucial to programming in the browser, properly explaining all the properties they support and the interaction among those properties would take two or three books.
-
 The main reason to introduce selector syntax—the notation used in style sheets to determine which elements a set of styles apply to—is that we can use this same mini-language as an effective way to find DOM elements.
 
 The querySelectorAll method, which is defined both on the document object and on element nodes, takes a selector string and returns an array-like object containing all the elements that it matches.
