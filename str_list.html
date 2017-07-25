@@ -1,0 +1,18 @@
+<script>
+  /*
+  JavaScript program to take a string and convert it into list or array by using the spaces in the string as delimiter
+Input
+python ruby php
+Output
+Entered string :python ruby php
+List generated is:
+['python', 'ruby', 'php']
+  */
+  //message variable
+  var msg = 'Enter the string';
+  var k = prompt(msg);
+  document.write('Entered string :'+k+'<br>');
+  //using split and type casting we convert string to list
+  var li = k.split(' ');
+  document.write('List generated is:'+li);
+</script>

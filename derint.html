@@ -1,0 +1,51 @@
+<script>
+/*
+JavaScript program to find derivative and integral of polynomial,for polynomial x3 + 4x2 + 2x - 1 given in form of 1 4 2 -1
+Input
+enter the coefficients:
+5 4 3 2 1
+Output
+after differentiation,the equation is:+20.000000x^3 +12.000000x^2 +6.000000x^1 +2.000000
+after integration the equation is:+1.000000x^5 +1.000000x^4 +1.000000x^3 +1.000000x^2 +1.000000x^1 +C
+*/
+var msg = 'enter the coefficients:';
+//enter equation that is in form of  x3+4x2+2x-1 as 1 4 2 -1
+var equa = prompt(msg);
+//spliting string into int list using map and split
+
+var coef = equa.split(' ').map(Number);
+var defe = [];
+//integration loop for getting integration of equation
+for (var i =0;i<coef.length;i++){
+    if((coef.length)-i-1!=0){
+        defe.push(((coef.length)-i-1)*coef[i]);}}
+var str1 = 'after differentiation,the equation is:'
+//using loops and generating user understandable equation
+for (var i =0;i<defe.length;i++){
+    //if power of x not equal to zero condition
+    if((defe.length)-i-1 != 0){
+        //for i = o
+        //str1=str1+'coefficient of x^n i.e defe[0]'+X+'power of x(n(length - 0 - 1))'
+        //<sup> tag is html tag for superscript.
+        str1=str1+(String((defe[1]<0?'':'+') + defe[i])+'x<sup>'+String((defe.length)-i-1)+'</sup>');}
+    else{
+        str1=str1+(String((defe[1]<0?'':'+') + defe[i]));}
+    //condition for last term with power = 0
+    if (i != (defe.length -1))
+        {str1=str1+' '};}
+document.write(str1+'<br>');
+var str2 = 'after integration the equation is:';
+var dd = [];
+for(var i =0;i<coef.length;i++){
+  dd.push(coef.length-i);
+}
+for (var i =0;i<coef.length;i++){
+    //for i = o
+    //str2=str2+'coefficient of x^n i.e defe[0]'+X+'power of x(n(length - 0))'
+      var tmp = parseFloat(coef[i]/dd[i]);
+      str2=str2+String(((tmp<0?'':'+') + tmp))+'x<sup>'+String((coef.length)-i)+'</sup>';
+      str2=str2+' ';}
+      //adding constant
+      str2 = str2+'+C';
+document.write(str2);
+</script>

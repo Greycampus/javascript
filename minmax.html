@@ -1,0 +1,30 @@
+<script>
+/*
+program to find maxima minima for a quadratic equation for x^2 - 2x + 1 given as   1 -2 1
+Input
+enter the coefficients of quadratic equation:
+1 4 4
+Output
+After differentiation the equation:2.0x+4.000000
+the minima of given equation is at x=-2.000000
+*/
+var msg = 'enter the coefficients of quadratic equation:';
+var equa = prompt(msg);
+var coef = equa.split(' ');
+coef = coef.map(Number);
+var defe = [];
+//derivative loop
+//power of x = length - 1 - i  for i = 0 => power = 2
+for (var i =0;i<coef.length;i++){
+    //checks if the power of x is 0
+    if((coef.length)-i-1!=0){
+        //appending the derivative equation ,power of x*quotient of x
+        defe.push(((coef.length)-i-1)*coef[i]);}}
+document.write(`After differentiation the equation:`+(defe[0])+`x${(defe[1]<0?'':'+') + defe[1]}<br>`);
+//getting solution : constant in derived equation/quotient of x
+var mai = parseFloat(-1*defe[1])/defe[0];
+if(coef[0]>=0){
+    document.write(`the minima of given equation is at x = ${mai}`);
+}else{
+document.write(`the maxima of given equation is at x = ${mai}`);}
+</script>

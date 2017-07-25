@@ -1,0 +1,5 @@
+hello Ruby programmer
+hello C programmer
+hello C++ programmer
+hello python programmer
+hello buddy

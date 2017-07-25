@@ -1,0 +1,21 @@
+<script>
+  /*
+JavaScript program to find whether the number is odd and multiples of nine
+Input
+Enter the number
+27
+Output
+27 is both odd number and a multiple of 9
+*/
+//take input from user
+var msg = 'Enter the number';
+var a = prompt(msg);
+if(a%2!=0 && a%9==0)//by not 2 and by 9 true
+    {document.write(`${a} is both odd number and a multiple of 9`);}
+else if(a%2!=0 && a%9!=0)//by not 2 and by not 9
+    {document.write(`${a} is odd number but not a multiple of 9`);}
+else if(a%2==0 && a%9==0)//by 2 and by 9 true
+    {document.write(`${a} is not odd number but a multiple of 9`);}
+else
+{print(`${a} is not odd number and not a multiple of 9`);}
+</script>
