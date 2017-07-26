@@ -10,8 +10,8 @@ var msg = 'enter the number:';
 //printing message for user input
 //taking input and casting it into integer
 var n = prompt(msg);
-var minn = Math.floor(Math.log(n,3));
-var maxn = Math.ceil(Math.log(n,3));
+var minn = Math.floor(Math.log(n)/Math.log(3));
+var maxn = Math.ceil(Math.log(n)/Math.log(3));
 //helpful in getting the nearest power to 3 as follows
 //3^n = x+c where c is minimum for nearest power
 //3^n = x+c => log(3^n) = log(x+c) => n*log(3) = log(x+c)
