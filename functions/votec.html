@@ -1,0 +1,59 @@
+<script>
+/*Javascript program of writing a function to find the voting result based on a string input such that a letter in the string belongs to a particular party
+Input
+Enter votes:aaabbbcccdddacbdacdjhg  
+Output    
+its ties between d,c,a with 5 votes
+*/
+//enter votes in the form of string
+var msg="enter votes:";
+str = prompt(msg);
+//calls the function vote
+vote(str);
+function vote(str){
+	var uniq=new Array();
+	//takes the unique characters
+	var unique = str.split('').filter(function(item, i, ar){ return ar.indexOf(item) === i; }).join('');
+	//counts the unique characters
+	for(i=0;i<unique.length;i++)
+	{
+		count=0;
+		uniq[i]=new Array();
+		for(j=0;j<str.length;j++)
+		{
+	      if(unique[i]==str[j])
+	      {
+	        count++;
+	      }
+		}
+	    uniq[i][0]=count;
+	    uniq[i][1]=unique[i];
+	 }
+	 //sort the array in ascending order
+	 uniq=uniq.sort();
+	 //reverse the array
+	 uniq=uniq.reverse();
+	 i=0;
+	 //when only single party wins
+	 if(uniq[0][0]!=uniq[1][0])
+	 {
+	  document.write(uniq[0][1]);
+	  document.write(" wins with votes-");
+	  document.write(uniq[0][0]);
+	 }
+	 //if multiple parties wins
+	 else
+	 {
+	    document.write("its ties between ");
+	    document.write(uniq[0][1]);
+	    while(uniq[0][0]==uniq[i+1][0])
+	    {
+	    	document.write(",");
+	        document.write(uniq[i+1][1]);
+	        i++;
+	    }
+	    document.write(" with votes-");	
+	    document.write(uniq[0][0]);	 	
+	 }
+ }
+</script>
