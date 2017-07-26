@@ -1,0 +1,23 @@
+<script>
+/*PHP program to find the sum of the numbers in a alphanumeric string 
+Input
+enter the alphanumeric string:bhadfdf1205210dfdvana996
+Output
+the sum is:35
+*/
+var msg="enter the alphanumeric string:";
+//takes a king along with sum nubers
+k=prompt(msg);
+//the pattern replaces all the alphabets with null, such that only digits are present in string
+k=k.replace(/[a-zA-z]/g,'');
+var sum=new Array();
+//splits the string to array
+sum=k.split("");
+var sumd=0;
+for(i=0;i<sum.length;i++)
+{
+	sumd=sumd+parseInt(sum[i]);
+}
+document.write("The sum is:");
+document.write(sumd);
+</script>

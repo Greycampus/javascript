@@ -1,0 +1,26 @@
+<script>
+/*PHP program to replace all the patterns like '[!*]' using regular expression
+Input
+enter the string:bhgd[!*[!*][!*]]hjiurhyh7t54r
+Output
+string before modification:bhgd[!*[!*][!*]]hjiurhyh7t54r
+string after modification:bhgdhjiurhyh7t54r
+*/
+var msg="enter the string:";
+//takes a string along with sum nubers
+k=prompt(msg);
+document.write("string before modification:");
+document.write(k);
+document.write("</br>");
+//replace '[!*]' with the null
+new_str=k.replace("[!*]", "");
+//new_str = preg_replace('~[[][!][*][]]~', "", k);
+//to check if any other pattern like '[!*]' present in new_str, and replaces if present
+for(i=0;i<k.length;i++)
+{
+   new_str=new_str.replace("[!*]", "");
+}
+//displays the new_str
+document.write("string after modification:");
+document.write(new_str);
+</script>

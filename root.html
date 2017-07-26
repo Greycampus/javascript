@@ -1,0 +1,40 @@
+<script>
+/*Javascript program to use exception handling and prevent the calculation of roots of a quadratic equation if root are complex
+Input
+enter the equation in the form of 1 2 1 if equation is x^2 + 2x + 1:1 1 6
+Output
+Caught exception: roots are imaginary, so calculation stopped
+*/
+var i,t,r1,r2;
+var k=new Array();
+function quad(t,k)
+{
+ //if less than zero, throws exception
+ if(t<0)
+  throw "roots are imaginary, so calculation stopped";
+ else
+ {
+  //calculates the roots of the equation and display the roots
+  document.write("roots are:");
+  var r1=(-1*k[1]+ Math.sqrt(t))/2*k[0];
+  var r2=(-1*k[1]- Math.sqrt(t))/2*k[0];
+  document.write(r1);
+  document.write("</br>");
+  document.write(r2);
+ }
+}
+var msg="enter the equation in the form of 1 2 1 if equation is x^2 + 2x + 1:";
+//takes the values of coefficients of quadratic equation
+for(i=0;i<3;i++)
+	k[i]=prompt(msg);
+//if b^2-4ac is less than 0, then roots are imaginary
+//calculate b^2-4ac
+t=Math.pow(k[1],2)-4*k[0]*k[2];
+try
+{
+ quad(t,k);
+}
+catch(err) {
+        document.write(err);
+    }
+</script>

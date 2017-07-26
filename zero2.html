@@ -1,0 +1,51 @@
+<script>
+/*JavaScript program to use Exception handling and catch divided by zero, divided by power of 2 exceptions
+Input
+enter divident:9
+enter divisor:2
+Output
+Caught exception: shouldnt be divided by zero or a power of 2
+*/
+function check(a,b)
+{
+   //converts the divisor-1 value in to binary format, as 2^n-1 contains only 1's in its binary value
+   var c=b-1;
+   var count=0;
+   var converted = new Array();
+    while(c>=1) {
+      converted.unshift(c%2);
+      c = Math.floor(c/2);
+    }
+ for(i=0;i<converted.length;i++)
+ {
+    if(converted[i]==0)
+       var count=1;
+ }
+  if(b==0 || count==0)
+   {
+    try 
+    {
+     //throws the exception
+     throw "shouldnt be divided by zero or a power of 2";
+    }
+    //catches the exception
+    catch (err) 
+    {
+      document.write(err);
+    }
+   }
+ else
+ {
+  //displays the value if no exception occurs
+  var value=a/b;
+  document.write(value);
+ }
+
+}
+var msg="enter divident:";
+a = prompt(msg);
+var msg="enter divisor:";
+b = prompt(msg);
+check(a,b);
+
+</script>
