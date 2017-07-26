@@ -1,0 +1,30 @@
+<script>
+/*Javascript program to find the total occurences of a symbol in string using reqular expressions
+Input
+enter the main string:bhghugcdb3454kschbnbvnng
+Enter a symbol that you wish to find occurences:b
+Output
+b occured 5 times in bhghugcdb3454kschbnbvnng
+*/
+var msg= "enter the main string:";
+//takes the input of a string
+k=prompt(msg);
+//counts the characters in the string
+i=k.length;
+msg ="Enter a symbol that you wish to find occurences:";
+// takes the input of a character to count the occurences
+s=prompt(msg);
+//replace the characters with null
+new_str=k.replace(s, "");
+for(i=0;i<k.length;i++)
+{
+	//replace the all the specified characters with null
+   new_str=new_str.replace(s,"");
+}
+//counts the number of characters in the new string
+j=new_str.length;
+//difference between old string and new string gives the count of the character
+ans=i-j;
+document.write('number of times occured:');	
+document.write(ans);
+</script>
