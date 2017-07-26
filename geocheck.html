@@ -1,0 +1,42 @@
+<script>
+/*Javascript program to check whether a given number is in a goemetric progression or not for a given initial value and factor
+Input
+enter initial term:2
+enter ratio in series:8
+enter number you want to check:16
+Output
+yes its in series
+*/
+var a,r,k,tmp,l;
+msg="enter initial term:";
+a=prompt(msg);
+//takes the ratio of the geometric progression
+msg="enter ratio in series:";
+r=prompt(msg);
+//takes the input of a number to check
+msg="enter number you want to check:";
+k=prompt(msg);
+if(k%a==0 && k==a)
+ document.write("you just entered the initial term again,yes its in series");
+else if(k%a==0 && k%r==0)
+{
+ //dividing by a(initial term)
+ tmp = k/a;
+ tmp=parseInt(tmp); 
+ while(tmp!=1 && tmp >=r)
+ {
+   //check for ratio exponential as in a.r^n
+   tmp=tmp/r;
+   tmp=parseInt(tmp);
+ }
+	 if(tmp==1)
+		document.write("yes its in series");
+	 else
+	    document.write("not in series");
+}
+else
+{
+    document.write("not in series");
+     document.write("hiiii");
+}
+</script>

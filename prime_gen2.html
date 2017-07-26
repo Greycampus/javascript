@@ -1,0 +1,68 @@
+<script>
+/*PHP program to enter a number to generate sequence of primes that are exactly at absoute difference of 1 with powers of two.
+Input
+enter the number:9
+Output
+primes that are exactly at absolute difference of 1 with powers of 2 are:
+3
+5
+7
+*/
+function soe(n,prime)
+{
+ var p = 2;
+ //calculates the power of 2
+ while(p*p<=n)
+ {
+  if(prime[p] ==1)
+  {
+    i=p*2;
+    //sets all the powers of 2 to 0
+    while(i<=n)
+    {
+     prime[i] = 0;
+     i = i+p;
+    }
+   }
+   p+=1;
+  }
+  //returns the prime array
+  return prime;
+}
+//checking whether the prime meets required condition
+function mp(n)
+{
+ //sets all the values of prime array to 1
+ var i,k;
+ var prime = new Array()
+ for(i=0;i<n+1;i++)
+ {
+  prime[i]=1;
+ }
+ //calls another function
+ prime = soe(n,prime);
+ k = 2;
+ //to check the numbers that are absolute difference with powers of 2
+ while ((1<<k)-1<=n && (1<<k)+1<=n)
+ {
+   var num = (1<<k)-1;
+   //if value is 1, displays the number
+   if(prime[num])
+    document.write(num);
+  document.write("<br>");
+  num = (1<<k)+1;
+  //if value is 1, displays the number
+  if(prime[num])
+   document.write(num);
+  document.write("<br>");
+  k = k+1;
+ }
+}
+var msg="enter the number:";
+//takes input of a number to display range of the number from 0 to n
+n = prompt(msg);
+document.write("primes that are exactly at absolute difference of 1 with powers of 2 are:");
+document.write("<br>");
+//calls the function
+mp(n);
+</script>

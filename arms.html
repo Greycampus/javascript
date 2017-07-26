@@ -1,0 +1,44 @@
+<script>
+/*Javascript program of writing a function to find whether a given number is armstrong number or not
+Input
+Enter a number:370
+Output
+armstrong number
+*/
+//logic for armstrong
+function arm(num)
+{
+	var sum=0;
+	//temp variable to store the real value
+	var temp,rem;
+	temp=num;
+	while(temp!=0)
+	{
+	//to extract the last digit of the number
+	rem=temp%10;
+	//parseInt converts float value to int
+	rem=parseInt(rem);
+	//to make power of the digit adding the value to sum, which is calculate in the before iteration
+	//strlen function returns the length of the number 
+	sum=sum+(Math.pow(rem,num.length));
+	sum=parseInt(sum);
+	//to extract the first n-1 digits as a number
+	temp=temp/10;
+	temp=parseInt(temp);
+	}
+	//if the sum value is equal to number, then armstrong
+
+	if(num==sum)
+	  return 1;
+	else
+	  return 0;
+}
+var msg = 'Enter a number:';
+num = prompt(msg);
+//takes input of a number to check whether it is armstrong
+//calling arm function
+if(arm(num))
+ document.write('armstrong number');
+else
+ document.write('not a armstrong number');
+</script>

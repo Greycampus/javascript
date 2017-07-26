@@ -1,0 +1,23 @@
+<script>
+/*Javascript program to find the factorial of a number using function
+Input
+Enter a number to find its factorial:5
+Output
+factorial is:120
+*/
+function factorial(number) 
+{ 
+  if (number ==1 || number==0) 
+   return 1; 
+  else 
+   //recursive function
+   return (number * factorial(number-1)); 
+}
+var msg = 'Enter a number:';
+//enter a number to find its factorial
+k = prompt(msg);
+//number to find the factorial
+//calling factorial function 
+document.write("factorial is:");
+document.write(factorial(k));
+</script>

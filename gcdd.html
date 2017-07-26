@@ -1,0 +1,22 @@
+<script>
+/*Javscript program of writing a function to find gcd of two numbers
+Input
+Enter two numbers whose GCD is to be found:15 27
+Output
+The GCD is:3
+*/
+//logic for gcd function
+function gcdd(a, b) {
+  //stopping condition for recursion that is bigger number is divisible by smaller number in gcd parameters
+  if(Math.max(a,b)%Math.min(a,b)==0)
+   return Math.min(a,b);
+  else
+   //returns gcd of remainder and divisor
+   return gcdd(Math.min(a,b),Math.max(a,b)%Math.min(a,b));
+}
+var msg = 'Enter two numbers whose GCD is to be found:';
+//enter two numbers in the form of a string
+a = prompt(msg);
+b = prompt(msg);
+document.write(gcdd(a, b));
+</script>
