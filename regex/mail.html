@@ -1,0 +1,23 @@
+<script>
+/*Javascript program to extract the mail addresses in the given string using regular expression
+Input
+enter the raw data containing mail addresses:
+bhavana@gmail.comrag@outlook.comteja@nic.in
+Output
+extracted email addresses are:
+bhavana@gmail.com
+rag@outlook.com
+teja@nic.in
+*/
+var msg="enter the raw data containing mail addresses:";
+var a = prompt(msg);
+function extractEmails (text)
+{
+	//pattern to extract @ and . symbol till three characters
+    return text.match(/[a-z0-9_\-\+]+[a-z0-9.\-\+]+@[a-z0-9\-]+\.([a-z]{2,3})(?:\.[a-z]{2})?/gi);
+}
+//displays the strings
+document.write("extracted mail addresses are:</br>");
+//calls the function extractEmails and join them with a new line
+document.write(extractEmails(a).join('</br>'));
+</script>
