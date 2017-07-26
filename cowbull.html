@@ -1,0 +1,57 @@
+<script>
+/*
+['1','2','3'].findIndex(function de(a){return a==gg[j];});
+Python program to make a game similar to cows and bulls
+Two players can play the game
+firstly a player enters a 4 digit secret number in range of 1-6.
+Second player have to guess the number given by first player in 3 guesses
+Suppose if first player entered 1234 as secret number
+second player will be given three chances for guessing
+1st guess : 1345 => should print +--  as (+)1 is at exact position and also present in secret number
+    (-)3,4 are in number but in different position  (' ')5 not in number
+2nd guess : 1234 => should print ++++ and you won and stops 3rd guess as player won
+
+Input
+enter secret number for game:2345
+player have three guesses for a 4digit number.(number range 1-6)
+
+Output
+1234
+ --- have another try
+1245
+ -++ have another try
+2345
+++++ you won
+well played
+
+*/
+var msg = 'enter secret number for game:';
+var sec = prompt(msg);
+msg = 'player have three guesses for a 4digit number.(number range 1-6)';
+document.write(msg+'<br>');
+//three guesses
+for(var i =0;i<3;i++){
+    var g = prompt(`${i+1}th guess:`);
+    var gg = Array.from(String(g));
+    var secc = Array.from(String(sec));
+    //document.write(`${gg[i]} ${secc[i]}`);
+    var scr = '';
+    //if guess = actual
+    if(g==sec){
+        document.write('++++ you won<br>');
+        break;}
+    else{
+        for (var j =0;j<sec.length;j++){
+            if(secc.findIndex(function de(a){return a==gg[j]})== gg.findIndex(function de(a){return a==gg[j]})){
+                //if position of a digit in guess = position of digit in actual number
+                scr = scr+'+';}
+            else if(secc.filter(function(x){return x == gg[j]}).length == gg.filter(function(x){return x == gg[j]}).length && secc.findIndex(function de(a){return a==secc[j]}) != secc.findIndex(function de(a){return a==gg[j]})){
+                //if position of digit is not same but if digit exists in numbers
+                scr = scr+'-';}
+            else{
+                //if no match in position or occurence
+                scr = scr+' ';}}
+        document.write(`your ${i+1}<sup>th</sup> guess: ${g} <br>`);
+        document.write(scr+' have another try<br>');}}
+document.write('well played');
+</script>

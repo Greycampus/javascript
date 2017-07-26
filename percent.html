@@ -1,0 +1,44 @@
+<script>
+/*
+Python program that should find the percentage of a student for input given in following manner
+3
+rag 78 56 72
+teja 83 67 78
+bhavana 83 75 67
+bhavana
+output: 75
+
+Input
+Enter the number of students
+5
+Enter the details of students:
+rag 89 90 91
+tej 86 94 90
+bhavana 88 92 90
+srinu 89 91 90
+ravi 89 90 93
+enter name of student
+rag
+
+Output
+percentage is 90.00
+
+
+*/
+//take in user input with multiple types in string format
+var msg = 'Enter the number of students';
+
+//taking input from user
+var n = prompt(msg);
+var marks = [];
+for (var i =0;i<n;i++){
+    //making list of raw data
+    marks.push(prompt('Enter the details of students:').split(' '));}
+//get name for percentage finding
+msg = 'enter name of student';
+var c = prompt(msg);
+var total=  [for (x of marks) if (x[0] == c) parseInt(x[1])+parseInt(x[2])+parseInt(x[3])];
+//finding average for getting marks
+total = parseFloat(total[0]/3);
+document.write(`percentage is ${total}`);
+</script>
