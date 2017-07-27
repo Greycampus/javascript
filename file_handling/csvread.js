@@ -7,6 +7,7 @@ two
 dho
 rendu
 */
+//install csvtojson module using 'npm install csvtojson'
 //import csvtojson module
 const csv = require('csvtojson');
 csv({noheader:false}).fromFile('cc.csv').on('json',(jsonObj)=>{
