@@ -1,4 +1,5 @@
 # Table of Contents
+
 1. Introduction to JavaScript
 	* What is JavaScript
 	* History
@@ -50,14 +51,22 @@
 	* Creating an array
 	* Accessing the elements of the array
 	* Accessing the complete array
-8. Functions
+8. File handling
+	* Create a file
+	* Open a file
+	* Get file information
+	* Writing a file
+	* Reading a file
+	* Closing a file
+	* Deleting a file
+9. Functions
 	* Function declarations
 	* Calling a function
 	* Function parameters
 	* call() method
 	* apply() method
 	* Nested functions
-9. Regular Expression
+10. Regular Expression
 	* String methods
 		- search() method
 		- replace() method
@@ -65,39 +74,41 @@
 	* Regular expression Object
 		- test() method
 		- exec() method
-10. Form fields
+11. Form fields
 	* Focus
 	* Disabled fields
 	* Text fields
 	* Checkboxes and radio buttons
 	* Select fields
 	* File fields
-11. Object oriented	
+12. Object oriented	
 	* Object properties
 	* Adding and deleting properties
 	* Accessing object methods
 	* object() constructor
 	* with keyword
 	* Superclass and subclass
-12. Document Object Model
+13. Document Object Model
 	* Finding elements
 	* Creating nodes
 	* Layout
 	* Styling
 	* cascading style sheets
 	* Query selectors
-13. Cookies
+14. Cookies
 	* Creating a cookie
 	* Deleting a cookie
 	* Setting a cookie
 	* Getting a cookie
 	* Checking a cookie
-14. Exception handling
+15. Exception handling
 	* Try and catch
 	* Throw errors
 	* Finally statement
 	* Error name values
 
 
+
+	
 
 	
