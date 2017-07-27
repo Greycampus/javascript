@@ -1,3 +1,12 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <style>
+  body{
+    font-family:'Roboto Mono',monospace;
+  }
+  </style>
+</head>
+<body>
 <script>
 /*
 using loops of your choice and print as follows for a given input
@@ -32,11 +41,11 @@ fffffffffff
 */
 a = parseInt(prompt('enter number'));
 n = parseInt(prompt('enter width'));
-//document.write('<span style="font-family:sans-serif;text-align:center;">')
+//document.write('<span>')
 for (var i = 0; i < a; i++) {
-  var cent = String.fromCharCode(97+i).repeat(2*i+1);
-  var lt = '-'.repeat(k = n-cent.length>0?Math.floor((n-cent.length)/2):0);
-  var rt = '-'.repeat(k = n-cent.length>0?Math.ceil((n-cent.length)/2):0);
+  var cent = (String.fromCharCode(97+i)).repeat(2*i+1);
+  var lt = ('-').repeat(k = n-cent.length>0?Math.floor((n-cent.length)/2):0);
+  var rt = ('-').repeat(k = n-cent.length>0?Math.ceil((n-cent.length)/2):0);
   document.write(lt+cent+rt+'<br>');
 }
 for(var i =1;i<a;i++){
@@ -46,3 +55,4 @@ for(var i =1;i<a;i++){
   document.write(lt+cent+rt+'<br>');
 }
 </script>
+</body>
