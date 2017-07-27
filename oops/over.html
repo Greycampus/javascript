@@ -1,0 +1,29 @@
+<script>
+/*
+program to Use Function Overridingin a class.
+Output
+B's hello
+A's GoodBye
+*/
+class A {
+  constructor() {
+
+  }
+  m1(ab){
+    document.write("A's "+ab+'<br>');
+  }
+}
+class B extends A {
+  constructor() {
+    super();
+  }
+  m1(ab){
+    document.write("B's "+ab+'<br>');
+  }
+}
+var b = new A();
+var c = new B();
+//c.m1() prints hello from B
+c.m1('hello');
+b.m1('GoodBye');
+</script>

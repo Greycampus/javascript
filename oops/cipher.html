@@ -1,0 +1,65 @@
+<script>
+/*
+JavaScript program that implement a ceaser cipher in a class by inhereting texts from a parent class
+ A cipher is a methodology for generating a secret message only understandable if we employ a reverse function to cipher function
+ Ceaser cipher alters text by rotating text n times given by user
+ e.g: for text 'hihow' if shift of '5' is applied we get  'mnmtb'
+    h=8=>8+5=13=m for a=1,b=2,c=3,d=4,....z=26
+ We extended our functinality to numbers also i.e 0=1,1=2,2=3,3=4,....9=10
+our job is use user given text, stored in parent class to be used in child class for encryption using ceasar cipher
+and print the cipher text or output generated.
+Input
+enter the text to encrypted:ceasarcipherwith1234567
+enter shift for cisear cipher:5
+Output
+entered plain text:ceasarcipherwith1234567
+cipher text is:hjfxfwhnumjwbnym6789012
+*/
+//cipher parent
+// stores text
+class cipher {
+  constructor(tst,sh) {
+    this.tst = tst;
+    this.sh = sh;
+  }
+}
+class icipher extends cipher{
+  constructor(tst,sh){
+    super(tst,sh);
+    this.sh = sh;
+  }
+  encrypt(){
+    document.write('entered plain text:<h3>'+this.tst+'</h3><br>');
+    var csr = this.tst.toLowerCase();
+    var cc = '';
+    for (var i = 0; i < this.tst.length; i++) {
+        if(csr.charCodeAt(i)>122-(this.sh%26)){
+          //after checking if the ord value may exceed the ascii alphabet range
+          //eg: shift = 5 ,for z =>122-26+5%26 => gives 101 i.e., e
+          cc = cc+ String.fromCharCode(csr.charCodeAt(i)-26+this.sh%26);
+        }
+        //finding whether the text has numbers
+        else if(csr.charCodeAt(i)>=48 && csr.charCodeAt(i)<=57){
+          //checking for ord value exceeding the numbers limit
+          if(csr.charCodeAt(i)>57-(this.sh%10)){
+            //eg: for 9 , shift = 3 => 57 -10+3%10 = >50 i.e., 2
+            cc = cc+String.fromCharCode(csr.charCodeAt(i)-10+this.sh%10);
+          }
+          else {
+            //simply adding the shift as it will not exceed the limits
+            cc = cc+String.fromCharCode(csr.charCodeAt(i)+this.sh%10);
+          }
+        }
+        else{
+          //simply adding the shift as it wll not exceed the limits
+          cc = cc+String.fromCharCode(csr.charCodeAt(i)+this.sh%26)
+        }
+    }
+    document.write('cipher text is:<h3>'+cc+'</h3>');
+  }
+}
+var txt = String(prompt('enter the text to encrypted:'));
+var   sht = parseInt(prompt('enter shift for cisear cipher:'));
+var k = new icipher(txt,sht);
+k.encrypt();
+</script>

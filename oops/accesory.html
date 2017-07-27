@@ -1,0 +1,73 @@
+<script>
+/*
+JavaScript program to have
+Use the mobile phone class(with below conditions) as parent and build the accessory class for a shop for biling purpose.
+build a class to store the data of the mobile phones with screen size,ram,company and processor along with Constructor and function to estimate cost of phone based on conditions
+  samsung:7000(pr)
+  moto:5999
+  lenovo:4000
+  nokia:6100
+  est cost = pr*(scr size/4.0)+pr*(ram/1.0)+pr*(proc/1.0)+0.05*pr
+Input
+enter screen size(inches):5.5
+enter ram (GB):3
+enter company name :moto
+enter processor speed(Ghz)1.8
+do you want a screen guard for your phone? (1 for yes 0 for no):1
+do you want a pounch or case for your phone? :1
+do you want  earphones for your phone? :0
+Output
+total cost of your moto phone with accesories is :37843
+*/
+//mobiles class
+class mobiles{
+    //constructor initializing the class variables
+    constructor(s_size,ram,company,proc){
+        this.s_size = s_size;
+        this.ram = ram;
+        this.company = company;
+        this.proc = proc;}
+
+    estimator(){
+        var ecost;
+        //cost estimator calculating the cost based on company if company not listed printing not available in our catalog
+        if(this.company.toLowerCase()=='samsung' || this.company.toLowerCase()=='moto'|| this.company.toLowerCase()=='lenovo' || this.company.toLowerCase()=='nokia'){
+            if(this.company.toLowerCase()=='samsung'){
+                ecost = 7000*(this.s_size/4)+7000*(this.ram)+7000*this.proc+0.05*7000;}
+            else if(this.company.toLowerCase()=='moto'){
+                ecost = 5999*(this.s_size/4)+5999*(this.ram)+5999*this.proc+0.05*5999;}
+            else if(this.company.toLowerCase()=='lenovo'){
+                ecost = 4000*(this.s_size/4)+4000*(this.ram)+4000*this.proc+0.05*4000;}
+            else if(this.company.toLowerCase()=='nokia'){
+                ecost = 6100*(this.s_size/4)+6100*(this.ram)+6100*this.proc+0.05*6100;}
+            //document.write('the estimated cost of your '+this.company+' phone is around:'+String(parseInt(ecost)));
+          return ecost;}
+        else{
+            //document.write('specified company not available in our catalog');
+          return ecost;}
+        }
+}
+class acce extends mobiles {
+  constructor(scr,ram,com,pro,scg,pp,ear) {
+    super(scr,ram,com,pro);
+    this.scg = scg;
+    this.pp = pp;
+    this.ear = ear;
+  }
+  bill(){
+    var phc = parseInt(this.estimator());
+    var tc = this.scg*200+this.pp*300+this.ear*700;
+    document.write('total cost of your '+this.company+' phone with accesories is :'+String(phc+tc));
+  }
+}
+var scr = parseFloat(prompt('enter screen size(inches):'));
+var ram = parseFloat(prompt('enter ram (GB):'));
+var com = String(prompt('enter company name :'));
+var pro = parseFloat(prompt('enter processor speed(Ghz)'));
+var scg = parseInt(prompt('do you want a screen guard for your phone? (1 for yes 0 for no):'));
+var pp = parseInt(prompt('do you want a pounch or case for your phone? :'));
+var ear = parseInt(prompt('do you want  earphones for your phone? :'));
+//instantiating acce class
+var k =new  acce(scr,ram,com,pro,scg,pp,ear);
+k.bill()
+</script>

@@ -1,0 +1,48 @@
+<script>
+/*
+using loops of your choice and print as follows for a given input
+input:
+3
+9
+output:
+----a----
+---bbb---
+--ccccc--
+---bbb---
+----a----
+Input
+enter number:
+6
+enter width:
+11
+Output
+-----a-----
+----bbb----
+---ccccc---
+--ddddddd--
+-eeeeeeeee-
+fffffffffff
+-eeeeeeeee-
+--ddddddd--
+---ccccc---
+----bbb----
+-----a-----
+
+
+*/
+a = parseInt(prompt('enter number'));
+n = parseInt(prompt('enter width'));
+//document.write('<span style="font-family:sans-serif;text-align:center;">')
+for (var i = 0; i < a; i++) {
+  var cent = String.fromCharCode(97+i).repeat(2*i+1);
+  var lt = '-'.repeat(k = n-cent.length>0?Math.floor((n-cent.length)/2):0);
+  var rt = '-'.repeat(k = n-cent.length>0?Math.ceil((n-cent.length)/2):0);
+  document.write(lt+cent+rt+'<br>');
+}
+for(var i =1;i<a;i++){
+  var cent = String.fromCharCode(97+a-i-1).repeat(2*(a-i)-1);
+  var lt = '-'.repeat(k = n-cent.length>0?Math.floor((n-cent.length)/2):0);
+  var rt = '-'.repeat(k = n-cent.length>0?Math.ceil((n-cent.length)/2):0);
+  document.write(lt+cent+rt+'<br>');
+}
+</script>
